@@ -1,0 +1,8 @@
+header {
+  background: #102444;
+  background: linear-gradient(
+    90deg,
+    #102444 0%,
+    #003c86 100%
+  );
+}

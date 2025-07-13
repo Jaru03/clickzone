@@ -1,0 +1,244 @@
+<section class="h-[80vh]">
+  <div
+    class="text-primary-text h-full grid grid-cols-4 grid-rows-2 gap-2 max-w-6xl mx-auto pt-2"
+  >
+    <article
+      class="flex flex-col justify-end pb-12 gap-3 items-center col-[1/3] row-[1/3] relative overflow-hidden"
+    >
+      <p class="brightness-100">Moviles</p>
+      <h2 class="text-4xl">Google Pixel 9 Pro XL</h2>
+      <p class="text-sm">Con una versatilidad de las cámaras excelente.</p>
+
+      <div class="flex flex-col justify-center items-center gap-2">
+        <h3 class="text-xl">Comprar Ahora</h3>
+        <button
+          class="border cursor-pointer font-semibold border-solid text-sm border-white py-2 px-4"
+        >
+          Ver más
+        </button>
+      </div>
+
+      <img
+        src="/movil-hero.jpg"
+        class="w-full h-full absolute top-0 -z-10 brightness-75"
+        alt=""
+      />
+    </article>
+    <article
+      class="bg-[url(/gadgets-hero.webp)] relative cursor-pointer bg-center bg-no-repeat bg-cover flex flex-col justify-end pb-8 gap-3 items-center"
+    >
+      <h2 class="text-3xl z-10">Gadgets</h2>
+      <div class="absolute backdrop-brightness-[.7] w-full h-full top-0 left-0"></div>
+    </article>
+    <article
+      class="bg-[url(/pc-hero.jpg)] bg-center bg-cover bg-no-repeat flex flex-col justify-end pb-8 gap-2 items-start pl-8 relative"
+    >
+    <div class="absolute backdrop-brightness-[.7] w-full h-full top-0 left-0"></div>
+      <h2 class="text-3xl z-10">PC</h2>
+      <p class="z-10 text-sm">Necesitas cosas para tu PC o una nueva PC? Echa un vistazo.</p>
+      <button
+        class="border z-10 cursor-pointer font-semibold text-sm border-solid border-white py-2 px-4"
+      >
+        Ver más
+  </button>
+    </article>
+    <article
+      class="bg-[url(/perifericos-hero.jpeg)] bg-center bg-no-repeat bg-cover flex flex-col justify-center items-start pl-8 col-[3/5] gap-2"
+    >
+      <h2 class="text-3xl">Perifericos</h2>
+      <p class="text-sm">
+        Todos los perifericos que necesitas y aún los que no sabías que
+        necesitabas.
+      </p>
+      <button
+        class="border cursor-pointer font-semibold text-sm border-solid border-white py-2 px-4"
+      >
+        Ver más
+      </button>
+    </article>
+  </div>
+</section>
+<section>
+  <div class="grid grid-cols-4 max-w-6xl mx-auto pt-4">
+    <article class="grid grid-cols-2 grid-rows-2">
+      <ng-icon
+        class="row-[1/3] text-4xl self-center justify-self-center"
+        name="heroTruckMicro"
+      />
+      <p class="self-center text-sm font-semibold">Envío Gratis</p>
+      <p class="text-secundary-text text-xs">
+        Envío Gratis hasta la puerta de tu casa
+      </p>
+    </article>
+    <article class="grid grid-cols-2 grid-rows-2">
+      <ng-icon
+        class="row-[1/3] text-4xl self-center justify-self-center"
+        name="heroCheckBadgeMicro"
+      />
+      <p class="self-center text-sm font-semibold">Garantía Oficial</p>
+      <p class="text-secundary-text text-xs">
+        Recibe tu dinero devuelte en 7 días.
+      </p>
+    </article>
+    <article class="grid grid-cols-2 grid-rows-2">
+      <ng-icon
+        class="row-[1/3] text-4xl self-center justify-self-center"
+        name="heroChatBubbleLeftRightMicro"
+      />
+      <p class="self-center text-sm font-semibold">Soporte Online 24-7</p>
+      <p class="text-secundary-text text-xs">Soporte Tecnico 24/7</p>
+    </article>
+    <article class="grid grid-cols-2 grid-rows-2">
+      <ng-icon
+        class="row-[1/3] text-4xl self-center justify-self-center"
+        name="heroCreditCardMicro"
+      />
+      <p class="self-center text-sm font-semibold">Pago Seguro</p>
+      <p class="text-secundary-text text-xs">Todas las tarjetas aceptadas</p>
+    </article>
+  </div>
+</section>
+<section>
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-4 grid-rows-[auto, 1fr] py-8 gap-4"
+  >
+    <h2
+      class="text-2xl font-semibold pl-4 col-[1/5] border-l-4 border-solid border-black"
+    >
+      Últimos Productos
+    </h2>
+
+    @for (producto of ultimosProductos; track $index) {
+
+    <article class="bg-gray-100">
+      <img [src]="producto.img" class="aspect-square" alt="" />
+
+      <div
+        class="grid grid-rows-3 grid-cols-2 px-4 py-2 bg-white border-2 border-solid border-gray-100"
+      >
+        <h3 class="text-lg font-semibold col-[1/3]">{{ producto.titulo }}</h3>
+        <p class="col-[1/3] text-xs">{{ producto.description }}</p>
+        <p class="text-sm text-green-800">{{ producto.price }}€</p>
+        <p class="text-sm">{{ producto.calificacion }}</p>
+      </div>
+    </article>
+    }
+  </div>
+</section>
+<section class="bg-primary-2">
+  <div class="max-w-6xl mx-auto grid grid-cols-2">
+    <div class="flex flex-col justify-center items-center gap-2">
+      <p class="bg-yellow-400 py-2 px-4 font-semibold">Apresurate!</p>
+      <h2 class="text-4xl font-bold text-center text-primary-text">
+        Descuento del 25% en nuestros productos
+      </h2>
+      <div class="grid grid-cols-4 gap-2 text-primary-text">
+        <div
+          class="shadow-lg border border-solid border-primary-2 rounded-2xl p-2 flex flex-col items-center justify-center"
+        >
+          <h3 class="font-semibold text-xl">310</h3>
+          <p>Días</p>
+        </div>
+        <div
+          class="shadow-lg border border-solid border-primary-2 rounded-2xl p-2 flex flex-col items-center justify-center"
+        >
+          <h3 class="font-semibold text-xl">02</h3>
+          <p>Horas</p>
+        </div>
+        <div
+          class="shadow-lg border border-solid border-primary-2 rounded-2xl p-2 flex flex-col items-center justify-center"
+        >
+          <h3 class="font-semibold text-xl">09</h3>
+          <p>Minutos</p>
+        </div>
+        <div
+          class="shadow-lg border border-solid border-primary-2 rounded-2xl p-2 flex flex-col items-center justify-center"
+        >
+          <h3 class="font-semibold text-xl">02</h3>
+          <p>Segundos</p>
+        </div>
+      </div>
+      <p class="text-xl pt-4 text-primary-text font-bold cursor-pointer">
+        Comprar Ahora
+      </p>
+    </div>
+    <img src="iphone-hero.webp" class="w-full h-full" alt="" />
+  </div>
+</section>
+<section>
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-4 grid-rows-[auto, 1fr] py-8 gap-4"
+  >
+    <h2
+      class="text-2xl font-semibold pl-4 col-[1/5] border-l-4 border-solid border-black"
+    >
+      Productos Populares
+    </h2>
+
+    @for (producto of productosPopulares; track $index) {
+
+    <article class="bg-gray-100">
+      <img [src]="producto.img" class="aspect-square" alt="" />
+
+      <div
+        class="grid grid-rows-3 grid-cols-2 px-4 py-2 bg-white border-2 border-solid border-gray-100"
+      >
+        <h3 class="text-lg font-semibold col-[1/3]">{{ producto.titulo }}</h3>
+        <p class="col-[1/3] text-xs">{{ producto.description }}</p>
+        <p class="text-sm text-green-800">{{ producto.price }}€</p>
+        <p class="text-sm">{{ producto.calificacion }}</p>
+      </div>
+    </article>
+    }
+  </div>
+</section>
+<section class="bg-primary-2">
+  <div class="max-w-6xl mx-auto py-8 grid grid-flow-col grid-rows-2">
+    <h2 class="text-center text-primary-text text-2xl col-[1/7] pb-4">
+      Marcas con las que trabajamos
+    </h2>
+    <ng-icon
+      class="text-5xl self-center justify-self-center"
+      color="white"
+      name="simpleApple"
+    />
+    <ng-icon
+      class="text-5xl self-center justify-self-center"
+      color="white"
+      name="simpleDell"
+    />
+    <ng-icon
+      class="text-5xl self-center justify-self-center"
+      color="white"
+      name="simpleHp"
+    />
+    <ng-icon
+      class="text-5xl self-center justify-self-center"
+      color="white"
+      name="simpleGoogle"
+    />
+    <ng-icon
+      class="text-5xl self-center justify-self-center"
+      color="white"
+      name="simpleXiaomi"
+    />
+    <ng-icon
+      class="text-5xl self-center justify-self-center"
+      color="white"
+      name="simpleRedragon"
+    />
+  </div>
+</section>
+<section>
+  <div class="max-w-6xl h-96 mx-auto relative flex flex-col items-center mt-8">
+    <p class="font-semibold">Gran Descuento</p>
+    <h3 class="font-semibold text-3xl">Bundle de Productos</h3>
+    <p class="text-2xl">400€</p>
+    <button
+      class="bg-primary-2 text-primary-text py-2 px-4 rounded-2xl cursor-pointer mt-4"
+    >
+      Comprar Ahora
+    </button>
+    <img src="pre-footer.jpeg" class="absolute bottom-0 -z-10" alt="" />
+  </div>
+</section>
